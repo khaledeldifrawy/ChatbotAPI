@@ -21,8 +21,8 @@ from nltk_utils import tokenize, stem, bag_of_ward
 from train import all_word,tags,xy,set_state
 
 
-model = load_model("model.h5")
-intents = json.loads(open("dataset.json").read())
+model = load_model("ChatbotAPI/model.h5")
+intents = json.loads(open("ChatbotAPI/dataset.json").read())
 
 app = Flask(__name__)
 
@@ -34,6 +34,7 @@ def hello():
 
 @app.route("/chat", methods=["GET", "POST"])
 def chatbot_response():
+    msg = str(request.args['msg'])
     flag = 0
     Diagnosis1 = {
         "depreesion": 9,
@@ -56,7 +57,6 @@ def chatbot_response():
         "education": 0,
     }
 
-    msg = str(request.args['msg'])
 
     real_sentence = msg
     msg = tokenize(msg)
