@@ -3,6 +3,7 @@ import re
 import json
 import pandas as pd
 import nltk
+nltk.download('punkt')
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import pickle
