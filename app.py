@@ -19,7 +19,9 @@ import pickle
 import json
 from nltk_utils import tokenize, stem, bag_of_ward
 from train import all_word,tags,xy,set_state
-
+from . import train
+from .train import all_word,tags,xy,set_state
+from . import model
 
 model = load_model("ChatbotAPI/model.h5")
 intents = json.loads(open("ChatbotAPI/dataset.json").read())
