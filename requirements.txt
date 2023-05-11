@@ -3,6 +3,7 @@ Flask
 numpy
 pandas
 scikit-learn
+tensorflow
 nltk
 keras
 
