@@ -1,0 +1,1546 @@
+{
+    "intents": [
+        {
+            "tag": "name",
+            "patterns": [
+                "what is your name ?",
+                "what can i call you ?",
+                "what about your name ?"
+            ],
+            "responses": [
+                "my name is AI-Doctor as a default",
+                "I am AI-doctor as a default"
+            ]
+        },
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "Hey",
+                "How are you",
+                "Is anyone there?",
+                "Hello",
+                "Good day",
+                "AI_Doctor"
+            ],
+            "responses": [
+                "Hey :-), how are you today?",
+                "Hello, how are you today?",
+                "Hi there, what do you feel today?"
+            ]
+        },
+        {
+            "tag": "feeling_good",
+            "patterns": [
+                "i am Fine,thanks",
+                "Some variation, like Good,thanks",
+                "i am good,thanks",
+                "i am okay,thanks"
+            ],
+            "responses": [
+                " I am pleased that you're okay. You can talk to me about anything you feel is abnormal if you want"
+            ]
+        },
+        {
+            "tag": "feeling_Not_good",
+            "patterns": [
+                "i am not feeling well",
+                "i am not feeling good",
+                "i am not fine",
+                "i am feeling bad"
+            ],
+            "responses": [
+                "This is very sad, Why ?",
+                "oh no why do you feel not good ?",
+                "Tell me what's bothering you"
+            ]
+        },
+        {
+            "tag": "depreesion_key",
+            "patterns": [
+                "I have some mood disturbances that cause me to constantly feel sad",
+                "Lost pleasure and no longer interested in the usual things",
+                "I feel a lack of focus and sometimes guilt",
+                "I was not important to others and I feel worthless to me"
+            ],
+            "responses": [
+                "How long have you been feeling this way, less than two weeks or more ?",
+                "Has it been two weeks or more since this feeling?"
+            ]
+        },
+        {
+            "tag": "depreesion_time Y",
+            "patterns": [
+                "Once more than two weeks ago",
+                "more than two weeks",
+                "As I remember, yes, I feel it for about two weeks or more",
+                "not less than two weeks i think"
+            ],
+            "responses": [
+                "Well, now relax and let's discuss step by step how you feel and start with: \nTalking about your mood. Do you feel constant sadness ?",
+                "Well, now relax and let's discuss step by step how you feel and start with: \nWhat about your mood do you feel constant sadness ?"
+            ]
+        },
+        {
+            "tag": "depreesion_time N",
+            "patterns": [
+                "I have had these symptoms for less than two weeks",
+                "Not more than two weeks",
+                "About a week or less"
+            ],
+            "responses": [
+                "Do not worry, these symptoms are just a case of a situation and cannot be classified according to the current situation as anything. Please contact us if these symptoms persist for more than two weeks."
+            ]
+        },
+        {
+            "tag": "depreesion1 Y",
+            "patterns": [
+                "Yes, I feel some sadness sometimes and I don't know why",
+                "Yes, I feel very sad all the time",
+                "Not always, but sometimes I feel sad"
+            ],
+            "responses": [
+                "its okay, What about you, do you feel self-confident, or is this feeling weak ?",
+                "its okay, Do you still feel confident in yourself or weakened this confidence ?",
+                "well, Do you have a sense of self-confidence, or is it no longer the case and is followed by a sense of inferiority ?"
+            ]
+        },
+        {
+            "tag": "depreesion1 N",
+            "patterns": [
+                "My condition now is fairly good. I do not feel constant sadness",
+                "I may feel sometimes, but at intermittent periods, for certain situations that are not continuous"
+            ],
+            "responses": [
+                "Greate, What about you, do you feel self-confident, or is this feeling weak ?",
+                "Greate, Do you still feel confident in yourself or weakened this confidence ?",
+                "Greate, Do you have a sense of self-confidence, or is it no longer the case and is followed by a sense of inferiority ?"
+            ]
+        },
+        {
+            "tag": "depreesion2 Y",
+            "patterns": [
+                "No, this is no longer the case, and there is a lack of self-confidence",
+                "The feeling of self-confidence became very weak and I began to feel inferior",
+                "My self-confidence has weakened a lot"
+            ],
+            "responses": [
+                "Are you desperate for life and feel that it is worthless ?",
+                "Do you feel guilty about yourself and always feel anxious and stressed, even from the simplest things ?"
+            ]
+        },
+        {
+            "tag": "depreesion2 N",
+            "patterns": [
+                "Yes, I feel confident in myself",
+                "No, my self-confidence is not weak. On the contrary, I feel very self-confident",
+                "I don't feel inferior, I am confident of myself"
+            ],
+            "responses": [
+                "Well, what about life? Does life have value for you or not?",
+                "Well, what about yourself? Do you feel guilty about yourself and always feel anxious, and this happens even in the simplest things?"
+            ]
+        },
+        {
+            "tag": "depreesion3 Y",
+            "patterns": [
+                "Yes, I am desperate, and I do not find a goal to survive, and I am no longer able to survive",
+                "Yes, I feel guilty, and I am always tense and worried, and I don't know why"
+            ],
+            "responses": [
+                "Well, what about the activities that you practice, do you still practice them ?",
+                "Well, the fun activities that you do, do you still do them ?"
+            ]
+        },
+        {
+            "tag": "depreesion3 N",
+            "patterns": [
+                "No, I am not that desperate, and I don't feel guilty about myself",
+                "No, I don't feel worthless, and I don't feel anxious or tense"
+            ],
+            "responses": [
+                "Good, what about the activities that you practice, do you still practice them ?",
+                "Greate, the fun activities that you do, do you still do them ?"
+            ]
+        },
+        {
+            "tag": "depreesion4 Y",
+            "patterns": [
+                "I don't do it anymore, on the contrary, I feel a lack of desire for it",
+                "I don't feel that it no longer arouses pleasure and passion in me"
+            ],
+            "responses": [
+                "Well, what about your sleep, is it regular or irregular ?",
+                "Well, do you sleep well ?"
+            ]
+        },
+        {
+            "tag": "depreesion4 N",
+            "patterns": [
+                "Yes, I am still doing the activities I used to do",
+                "Yes, I still practice activities, not all of them, but most of them I still do"
+            ],
+            "responses": [
+                "Greate, what about your sleep, is it regular or irregular ?",
+                "Greate, do you sleep well ?"
+            ]
+        },
+        {
+            "tag": "depreesion5 Y",
+            "patterns": [
+                "No, it is completely irregular. Sometimes I find it difficult to sleep at night. Despite that, I wake up early, and sometimes I sleep for long periods.",
+                "No, it is irregular. Although I sometimes feel lethargic, I find it difficult to sleep at night.",
+                "I feel lethargic and lethargic, and I find it difficult to sleep at night, and sometimes I sleep for long periods"
+            ],
+            "responses": [
+                "Do you feel any physical pain ?",
+                "Do you feel a headache or any physical muscular pain ?"
+            ]
+        },
+        {
+            "tag": "depreesion5 N",
+            "patterns": [
+                "Yes, to a large extent, my sleep is regular and I sleep well",
+                "Yes, I sleep well and regularly",
+                "Yes, I sleep appropriate and regular periods"
+            ],
+            "responses": [
+                "Good, Do you feel any physical pain ?",
+                "Greate, Do you feel a headache or any physical muscular pain ?"
+            ]
+        },
+        {
+            "tag": "depreesion6 Y",
+            "patterns": [
+                "Yes, I feel some headaches, and I don't get better even with medication",
+                "Sometimes I feel headache and muscle pain for no apparent reason"
+            ],
+            "responses": [
+                "Well, what about your communication with your relatives or others ?",
+                "Do you still communicate with your relatives and other people ?",
+                "Did you socialize with people ?"
+            ]
+        },
+        {
+            "tag": "depreesion6 N",
+            "patterns": [
+                "I don't feel any physical pain",
+                "I don't feel any headache",
+                "Sometimes I feel a slight headache, but it gets better with medication"
+            ],
+            "responses": [
+                "Well, what about your communication with your relatives or others ?",
+                "Do you still communicate with your relatives and other people ?",
+                "Did you socialize with people ?"
+            ]
+        },
+        {
+            "tag": "depreesion7 Y",
+            "patterns": [
+                "No, in recent times I tend to isolationism",
+                "I find it difficult to talk to anyone and tend to be isolated",
+                "In the recent period, I find myself speaking slowly, moving sluggishly and sluggishly, and tending to isolationism",
+                "I don't want to talk to anyone, and I find myself day after day moving away from my family and close friends"
+            ],
+            "responses": [
+                "Do you take sedatives?",
+                "Have you thought about death or suicide and taking sedatives?",
+                "What about suicide do you think about it?"
+            ]
+        },
+        {
+            "tag": "depreesion7 N",
+            "patterns": [
+                "Yes, I communicate with my relatives and other people",
+                "Yes, I can communicate with my relatives and friends",
+                "Yes, I can mix with people"
+            ],
+            "responses": [
+                "You doning well, Do you take sedatives?",
+                "Greate, Have you thought about death or suicide and taking sedatives?",
+                "Well, What about suicide do you think about it?"
+            ]
+        },
+        {
+            "tag": "depreesion8 Y",
+            "patterns": [
+                "Yes, I thought a lot about suicide, but I backed off",
+                "Yes, I thought about this, and I take tranquilizers to try to escape from this feeling, because I can no longer bear this."
+            ],
+            "responses": [
+                "First, you have to remove the idea of suicide from your headand avoid any sedative  you take. Now tell me, does it represent a type of alcohol?"
+            ]
+        },
+        {
+            "tag": "depreesion8 N",
+            "patterns": [
+                "No, I have never contemplated suicide, nor do I take sedatives",
+                "I take some sedatives, but I don't think about suicide"
+            ],
+            "responses": [
+                "This is very good and do not think about this at all.Now tell me, does it represent a type of alcohol?"
+            ]
+        },
+        {
+            "tag": "depreesion9 Y",
+            "patterns": [
+                "I never drink any alcohol",
+                "No, I avoid alcohol"
+            ],
+            "responses": [
+                "That is good do not try to do this and do not worry, things will get better and you will be fine ",
+                "That is good do not try to do this and Don't worry, things will go well."
+            ]
+        },
+        {
+            "tag": "depreesion9 N",
+            "patterns": [
+                "Yes, I drink some alcohol constantly",
+                "Yes, I drink alcohol",
+                "Yes, a lot. Try to escape from problems and turmoil"
+            ],
+            "responses": [
+                "That is not good , okay Lets talking about your daily life actions and about you can you control it or no?",
+                "That is not good ,What about your actions or movements , do you feel any thing upnormal?"
+            ]
+        },
+        {
+            "tag": "Anxiety disorder_key",
+            "patterns": [
+                "I feel constant anxiety and excessive fear of everyday situations often",
+                "Feel some sudden feelings of intense anxiety, fear or terror, culminating within minutes as panic attacks",
+                "I get some feelings of anxiety and panic, which leads me to avoid some places or situations to prevent these feelings"
+            ],
+            "responses": [
+                "Well, now relax and let's discuss step by step how you feel and start with: \nAre you normally an optimist or a pessimist?"
+            ]
+        },
+        {
+            "tag": "anxiety disorder1 Y",
+            "patterns": [
+                "Yes, I am very pessimistic",
+                "To some extent I am pessimistic",
+                "I am pessimistic"
+            ],
+            "responses": [
+                "its okay, what about nervousness or anxiety? Do you feel something like that?",
+                "its okay,Do you have a sense of imminent danger, panic or something?",
+                "its okay,Do you feel a little nervous about places, people, or even situations?",
+                "Well, do you feel some anxiety or stress or something?",
+                "Well, have you ever had a sense of panic or imminent danger?",
+                "What about nervousness and anxiety? Do you suffer from this or something from panic?"
+            ]
+        },
+        {
+            "tag": "anxiety disorder1 N",
+            "patterns": [
+                "No, I am somewhat optimistic",
+                "No, I am not pessimistic"
+            ],
+            "responses": [
+                "Its okay, what about nervousness or anxiety? Do you feel something like that?",
+                "Its okay,Do you have a sense of imminent danger, panic or something?",
+                "Its okay,Do you feel a little nervous about places, people, or even situations?",
+                "Well, do you feel some anxiety or stress or something?",
+                "Well, have you ever had a sense of panic or imminent danger?",
+                "What about nervousness and anxiety? Do you suffer from this or something from panic?"
+            ]
+        },
+        {
+            "tag": "anxiety disorder2 Y",
+            "patterns": [
+                "Yes, I am very anxious and nervous about some situations and people",
+                "I was a little bit nervous, I've never been like that before",
+                "I am naturally nervous.",
+                "I always feel danger from what is around me, situations and people"
+            ],
+            "responses": [
+                "Do not worry, if with this tension, it will be followed by an increase in the heart rate. Do you feel this and sometimes difficulty in breathing?",
+                "Do not worry, do you find yourself in these situations breathing hard and your heart rate increasing?"
+            ]
+        },
+        {
+            "tag": "anxiety disorder2 N",
+            "patterns": [
+                "No, it's not a big deal. I feel a little nervous, but simple",
+                "I am calm and don't worry too much about people and situations"
+            ],
+            "responses": [
+                "Well, what about your heart rate, is it increasing?",
+                "Okay, let's talk about the physical symptoms. Do you feel difficulty breathing or an increase in heart rate?"
+            ]
+        },
+        {
+            "tag": "anxiety disorder3 Y",
+            "patterns": [
+                "Yes, I usually feel difficulty breathing and an increase in heart rate",
+                "Yes, there is often an increase in heart rate, followed by difficulty in breathing and loss of control",
+                "Yes, it usually happens because of situations or people, and this leads to a loss of control"
+            ],
+            "responses": [
+                "its okay, does this stress make you sweat a lot and shiver with panic?",
+                "its ok, are you trembling with fear and panic, and this thing is followed by sweating a lot?"
+            ]
+        },
+        {
+            "tag": "anxiety disorder3 N",
+            "patterns": [
+                "No, not much, the rate increases, but not by much, and I do not find it difficult to breathe",
+                "Your heart rate does not stay the same as usual and you breathe normally",
+                "To some extent, I feel a slight increase in heart rate, but not significant"
+            ],
+            "responses": [
+                "Good, Have you come across, and in one of these situations, you shivered with panic, and your sweating increased at an abnormal rate?",
+                "Good, Have you ever found yourself in one of these situations sweating in an unprecedented way or even trembling with fright?"
+            ]
+        },
+        {
+            "tag": "anxiety disorder4 Y",
+            "patterns": [
+                "Yes, I sweat a lot and feel shivering, and this usually bothers me very much",
+                "This is really what is happening to me, I am sweating and shivering so hard",
+                "The fear of situations makes me shudder, and it bothers me a lot"
+            ],
+            "responses": [
+                "You are doing well. What about your state now? Do you feel tired and weak?",
+                "You are doing well. Do these situations make you feel weak and tired?",
+                "You are doing well. Do you feel tired and find it difficult to sleep?"
+            ]
+        },
+        {
+            "tag": "anxiety disorder4 N",
+            "patterns": [
+                "No, I might panic, but I don't shiver and sweat as usual",
+                "No, things usually don't happen in situations like this. I don't feel shivering, and it remains normal",
+                "I don't shiver or sweat unusually"
+            ],
+            "responses": [
+                "Well, that's great. Do you feel tired or weak in such situations?",
+                "Well, this is great. What about sleep? Do you feel difficulty sleeping, in addition to anxiety and weakness?"
+            ]
+        },
+        {
+            "tag": "anxiety disorder5 Y",
+            "patterns": [
+                "Certainly, I feel tired and have difficulty sleeping and insomnia",
+                "Of course, I feel tired and weak, and despite this tiredness, I find it difficult to sleep",
+                "Yes, I find it difficult to sleep, and I keep thinking about the situations that cause me great anxiety, and I remain like this"
+            ],
+            "responses": [
+                "It's not a bad thing. What about the difficulties and thinking about things other than the current anxiety? Can you do this?",
+                "Not bad. Let's move on to another point, such as focusing on the difficulties and thinking about other things to overcome the current anxiety. How about this?"
+            ]
+        },
+        {
+            "tag": "anxiety disorder5 N",
+            "patterns": [
+                "I usually don't feel this way and sleep normally. I don't feel tired or weak",
+                "I feel a little tired, but it is normal, but I sleep normally"
+            ],
+            "responses": [
+                "Wonderful, you will always find yourself focusing on difficulties, in addition to that you cannot avoid thinking about things other than anxiety?",
+                "Great, but tell me about the difficulties, do you always focus on them or not, and what about thinking about other things other than worrying"
+            ]
+        },
+        {
+            "tag": "anxiety disorder6 Y",
+            "patterns": [
+                "Honestly, I find it difficult to think about things other than worrying, and I always think about the difficulties of things.",
+                "Thinking about anxiety dominates my thinking and I often think about the bad or difficult side of things",
+                "All I care about is anxiety and difficulties in situations and things"
+            ],
+            "responses": [
+                "Well, this means that you find it difficult to control this anxiety, right?",
+                "What does it mean that controlling your anxiety is difficult for you and you always try to get rid of the things that cause anxiety?"
+            ]
+        },
+        {
+            "tag": "anxiety disorder6 N",
+            "patterns": [
+                "I don't do that, I mostly think about other people's affairs, and I don't worry about worrying, and I think about the difficulties of things",
+                "The difficulties of things may take an aspect of the focus, but in a small amount, and the main focus is on the positive aspects of the situations",
+                "I can put anxiety aside and think about other things and not take into account the difficulties of things"
+            ],
+            "responses": [
+                "Great, that claims to be an incentive to get rid of things that cause anxiety, right?",
+                "Great, this makes you avoid things or things that cause you anxiety, right?"
+            ]
+        },
+        {
+            "tag": "anxiety disorder7 Y",
+            "patterns": [
+                "Yes, I find it difficult to control my anxiety, and I always try to get rid of the things that cause it, or at least avoid them.",
+                "Yes, I avoid these things to cause anxiety and panic, because I find it difficult to control it",
+                "I have a strong motive to get rid of these things that cause me anxiety because it is difficult to control, as this is annoying"
+            ],
+            "responses": [
+                "You did well, don't worry about anything, everything will be fine, it's simple",
+                "Great, don't worry, everything will be fine",
+                "It's going great, don't worry about it and you'll be fine"
+            ]
+        },
+        {
+            "tag": "anxiety disorder7 N",
+            "patterns": [
+                "I do not find it difficult to control anxiety, as it is not a great anxiety, and I do not find a motive to avoid these situations",
+                "I don't feel motivated to get rid of things that cause such anxiety, I simply can't control it",
+                "No, it is not true. I do not avoid these things or things that cause anxiety, because I can control it"
+            ],
+            "responses": [
+                "You did well, don't worry about anything, everything will be fine, it's simple",
+                "Great, don't worry, everything will be fine",
+                "It's going great, don't worry about it and you'll be fine"
+            ]
+        },
+        {
+            "tag": "addictive_key",
+            "patterns": [
+                "i am not able to make normal things after quit addiction ",
+                "i am not able to control my actions ",
+                "i am not able to control my movements ",
+                "i afraid from back to addiction ",
+                "i afraid from back to alcohol",
+                "i am not able to make easy things and afraid from back to alcohol and addiction"
+            ],
+            "responses": [
+                "Well, now relax and let's discuss step by step how you feel and start with: \nTalking about your mood. Do you feel constant sadness ?",
+                "Well, now relax and let's discuss step by step how you feel and start with: \nWhat about your mood do you feel constant sadness ?"
+            ]
+        },
+        {
+            "tag": "addictive1 Y",
+            "patterns": [
+                "yes, i have change in movements and not control in acions ",
+                "my daily actions is not normal at all ",
+                "i feel not great , to be honest",
+                "i do not make any actions in my day "
+            ],
+            "responses": [
+                "Okay, I understand, tell me more about your use of alcohol or drugs, do you use them a lot?",
+                "Well, I understand, tell me, how often do you use drugs or alcohol?"
+            ]
+        },
+        {
+            "tag": "addictive1 N",
+            "patterns": [
+                "no, i have not change in movements and not control in acions ",
+                "my daily actions is normal ",
+                "i feel great , but i have some disorders ",
+                "i do many actions and activities in my day  "
+            ],
+            "responses": [
+                "That is good, tell me more about your use of alcohol or drugs, do you use them a lot?",
+                "That is good, I understand, tell me, how often do you use drugs or alcohol?"
+            ]
+        },
+        {
+            "tag": "addictive2 Y",
+            "patterns": [
+                "Yes, I have been using drugs or alcohol every day for the past few months.",
+                "Yes, I use alcohol and drugs almost every day",
+                "Yes, I use drugs and alcohol, but only occasionally"
+            ],
+            "responses": [
+                "Don't worry, okay, tell me, have you tried to quit alcohol or drugs, or have you ever received treatment for this addiction?",
+                "Have you ever thought about giving up alcohol or drugs in one way or another, or receiving treatment for addiction or something like that?"
+            ]
+        },
+        {
+            "tag": "addictive3 Y",
+            "patterns": [
+                "Yes, I've been to rehab a few times but never continued",
+                "Yes, there are many times to quit or treat but fail.",
+                "Yes I tried on my own several times but failed"
+            ],
+            "responses": [
+                "I know it's hard, Alright. how have your drug use and addiction been affecting your life? ",
+                "ok do not worry, tell me about changes in your life after addiction."
+            ]
+        },
+        {
+            "tag": "addictive3 N",
+            "patterns": [
+                "No, this is the first time I am asking for help.",
+                "No, this is the first time to quit or be treated.",
+                "No, I have never tried to stop using drugs or alcohol"
+            ],
+            "responses": [
+                "Alright. how have your drug use and addiction been affecting your life? ",
+                "its ok, tell me about changes in your life after addiction. "
+            ]
+        },
+        {
+            "tag": "addictive4 Y",
+            "patterns": [
+                "it is been really hard. i have lost my job and my relationships have suffered. I also have been feeling really down and hopeless. ",
+                "it is very sad, i have fail in education and my family relationships have suffered ",
+                "i live a sad life and i can not do normal and easy things, help me plz "
+            ],
+            "responses": [
+                "you will get well soon, have you noticed any changes in your mood or energy levels? ",
+                "do not worry about that, are you feel lazy? "
+            ]
+        },
+        {
+            "tag": "addictive5 Y",
+            "patterns": [
+                "yes, all time i am lazy and do not do any thing. ",
+                "yes, i have change in mood and my mood does not stable. ",
+                "yes, i do not have any energy to do any thing. "
+            ],
+            "responses": [
+                "Do not worry, everything will be fine, but first, follow the following steps to quit this addiction, and these symptoms will fade away and your life will return to normal.",
+                "Well, now the main goal is to quit this addiction, and your problems and symptoms that you are going through will be solved. Follow the steps with me, and I will help you with this"
+            ]
+        },
+        {
+            "tag": "Schizophrenia_key",
+            "patterns": [
+                "I feel that all the people around me want to hurt me, harass me or sometimes kill me",
+                "I feel that there is a person inside me or sometimes people who want to control me and control my mind",
+                "I am very afraid of myself.  I feel weird about myself.",
+                "I am not well, sometimes I hear voices and see people's fantasies next to me, and when I check I don't find them real",
+                "I feel disturbed and worried about these things as if they are chasing me",
+                "I am fine, I am a very likable person and there is no one like me on this planet, everyone wants to be my friend, I am a very great person"
+            ],
+            "responses": [
+                "Well, now relax and let's discuss step by step how you feel and start with: \nWhat are the changes in your apparent reactions that occur to you if you are exposed to a sudden situation and see that a strong person is hurting a weak person?",
+                "Well, now relax and let's discuss step by step how you feel and start with:Tell me, for example, how you feel if you are exposed to a sudden situation and see that a strong person is hurting a weak person"
+            ]
+        },
+        {
+            "tag": "Schizophrenia1 Y",
+            "patterns": [
+                "I don't feel any changes I don't feel anything about this situation",
+                "There are no changes, and I don't see any reaction to the situation, and I've continued with what I am doing, and I don't even care about it.",
+                "I don't know what to do or what is my reaction even in this situation if I am exposed to it"
+            ],
+            "responses": [
+                "Its okay, What about your eye contact with people, can you do it, or do you find it difficult in this matter?",
+                "Its okay, Do you find it difficult to communicate visually with others?",
+                "Its okay, When someone talks to you, do you make eye contact with them?"
+            ]
+        },
+        {
+            "tag": "Schizophrenia1 N",
+            "patterns": [
+                "Of course, a reaction will happen to me, as if I will be angry at this situation",
+                "Surely I will react then and enter and save the boy or the weak person",
+                "I may not be able to do anything, but I will feel some visible changes in my anger from this situation"
+            ],
+            "responses": [
+                "Greate, What about your eye contact with people, can you do it, or do you find it difficult in this matter?",
+                "Greate, Do you find it difficult to communicate visually with others?",
+                "Greate, When someone talks to you, do you make eye contact with them?"
+            ]
+        },
+        {
+            "tag": "Schizophrenia2 Y",
+            "patterns": [
+                "Yes, I find it difficult to make eye contact with people",
+                "I can not make eye contact with others",
+                "I don't look at his eyes and go far with my eyes in all directions"
+            ],
+            "responses": [
+                "Do not worry, what about the sounds that you hear? Do you hear sounds as if someone is calling you or begging you, or do you not hear such sounds?",
+                "Do not worry, Are there any sounds you hear next to you that you do not know the source of?",
+                "Do not worry, Have you come across and heard the sound of someone calling you or something like that, but you did not find anyone?"
+            ]
+        },
+        {
+            "tag": "Schizophrenia2 N",
+            "patterns": [
+                "I don't find it difficult to make eye contact with people",
+                "No, it's simple. I can look into his eyes while talking"
+            ],
+            "responses": [
+                "That is good, what about the sounds that you hear? Do you hear sounds as if someone is calling you or begging you, or do you not hear such sounds?",
+                "That is good, Are there any sounds you hear next to you that you do not know the source of?",
+                "That is good, Have you come across and heard the sound of someone calling you or something like that, but you did not find anyone?"
+            ]
+        },
+        {
+            "tag": "Schizophrenia3 Y",
+            "patterns": [
+                "Yes, I often hear voices and I do not know their source, and this matter sometimes scares me",
+                "Yes, when I am alone in the house, I think that someone from the family is in the house and calls for me, but no one else is there",
+                "Yes, I hear many voices, like someone calling for me or asking for an assistant to save him, but I don't know from what or who he is"
+            ],
+            "responses": [
+                "Okay, are the people to whom you hear these voices, do you see them clearly, or do you see them as fantasies?",
+                "Okay, are there fantasies of people whose voices you hear, or do you only hear voices?"
+            ]
+        },
+        {
+            "tag": "Schizophrenia3 N",
+            "patterns": [
+                "No, I have never heard such sounds",
+                "No, I have never heard voices calling out to me or anything like that"
+            ],
+            "responses": [
+                "Wonderful, have you ever seen fantasies of people or things, and then found that they did not exist in the first place?",
+                "Wonderful, what about your subconscious mind, does it depict fantasies of people talking to you, but they do not exist?"
+            ]
+        },
+        {
+            "tag": "Schizophrenia4 Y",
+            "patterns": [
+                "Yes, sometimes I see these phantoms, but their faces are blurred",
+                "Yes, I see people making those sounds, but the vision is always blurry",
+                "Yes, I see them mostly, but not clearly, and they are tall, and sometimes I see non-human beings"
+            ],
+            "responses": [
+                "Ok, let's go to the next, how do you see the people around you, do they love you or do they want to harm you?",
+                "Ok, let's go to the next, Tell me about the people around you, their attachments to you, their gestures, and their directions. Do you feel like they are trying to harass you, or are they treating you well?"
+            ]
+        },
+        {
+            "tag": "Schizophrenia4 N",
+            "patterns": [
+                "I don't see fantasies of those voices at all",
+                "I don't see fantasies",
+                "No, my subconscious mind did not depict fantasies of people before",
+                "No, I have never seen things or people that did not exist in reality"
+            ],
+            "responses": [
+                "Ok, let's go to the next, how do you see the people around you, do they love you or do they want to harm you?",
+                "Ok, let's go to the next, Tell me about those around you, their comments, gestures, and directions. Do you feel like they are trying to harass you, or are they treating you well?"
+            ]
+        },
+        {
+            "tag": "Schizophrenia5 Y",
+            "patterns": [
+                "I feel like they are trying to hurt me and their comments and gestures are silly so I don't follow their directions",
+                "Many of them are trying to hurt me",
+                "Their comments are very silly and annoy me and they are trying to hurt me and kill me"
+            ],
+            "responses": [
+                "Okay realx, do you feel that you are doing the tasks quickly, averagely, or slowly, and do you perform your work normally?",
+                "Ok do not worry come down, what about your work, do you perform it normally or not, and do you take time to do your daily tasks?"
+            ]
+        },
+        {
+            "tag": "Schizophrenia5 N",
+            "patterns": [
+                "Yes, they love me and never try to hurt me",
+                "They are very friendly and love me, and I love them too, and their comments to me are not bad",
+                "They don't bother me and they work very well for me"
+            ],
+            "responses": [
+                "Well, do you feel that you are doing the tasks quickly, averagely, or slowly, and do you perform your work normally?",
+                "Great, what about your work, do you perform it normally or not, and do you take time to do your daily tasks?"
+            ]
+        },
+        {
+            "tag": "Schizophrenia6 Y",
+            "patterns": [
+                "Mostly slowly and I don't perform my work normally",
+                "No, not normally, I think. Yes, I take a lot of time to do my daily tasks"
+            ],
+            "responses": [
+                "Its okay, have you ever reacted to a situation and then realized that the situation was simple and did not warrant this emotion?",
+                "Its okay, What about your emotional behavior towards situations, will you find it appropriate, or is it often too much?"
+            ]
+        },
+        {
+            "tag": "Schizophrenia6 N",
+            "patterns": [
+                "I do it moderately to some extent and for Audi my work is normal",
+                "Yes, I perform it normally and do not take much time to do my daily tasks",
+                "I do my tasks quickly, accomplish some time, and deal naturally in my work"
+            ],
+            "responses": [
+                "Good, have you ever reacted to a situation and then realized that the situation was simple and did not warrant this emotion?",
+                "Greate, What about your emotional behavior towards situations, will you find it appropriate, or is it often too much?"
+            ]
+        },
+        {
+            "tag": "Schizophrenia7 Y",
+            "patterns": [
+                "Yes, I am often overly emotional at times",
+                "My emotional behavior is too much compared to the situation",
+                "My emotional behavior is completely inappropriate for the situation"
+            ],
+            "responses": [
+                "okay, How do you feel about instructions? Do you like following instructions or rules?",
+                "Okay, What do the instructions or rules represent to you, do you follow them or not?",
+                "Okay, Rules and instructions, what about them? Do you find it difficult to follow them?"
+            ]
+        },
+        {
+            "tag": "Schizophrenia7 N",
+            "patterns": [
+                "I got excited, but my reaction was parallel to the situation",
+                "No, my emotional behavior was appropriate and was not excessive"
+            ],
+            "responses": [
+                "Good, How do you feel about instructions? Do you like following instructions or rules?",
+                "Greate, What do the instructions or rules represent to you, do you follow them or not?",
+                "Greate, Rules and instructions, what about them? Do you find it difficult to follow them?"
+            ]
+        },
+        {
+            "tag": "Schizophrenia8 Y",
+            "patterns": [
+                "Yes, I find it difficult to follow these silly instructions",
+                "I don't like to follow rules or instructions and it's hard for her to do",
+                "I do not comply with these rules or instructions"
+            ],
+            "responses": [
+                "Don't worry, everything will be fine, and I will follow up with you to get through this stage"
+            ]
+        },
+        {
+            "tag": "Schizophrenia8 N",
+            "patterns": [
+                "I have no problem with the rules or the instructions",
+                "Yes, I love the instructions and follow them, and I do not find a problem in following them",
+                "I do not find it difficult to follow the instructions or the rules, it is easy"
+            ],
+            "responses": [
+                "Don't worry, everything will be fine, and I will follow up with you to get through this stage"
+            ]
+        },
+        {
+            "tag": "Postpartum_key",
+            "patterns": [
+                "It is not well at all since birth, and I feel strange things, contrary to the habit.",
+                "Life became more difficult than life before birth.",
+                "After birth, I became more nervous than necessary, and this is against my will and results from fear, tension, and anxiety that haunts me most of the time in terms of difficulty.",
+                "Fear, tension and anxiety with bad thoughts, such as harming myself or harming the baby for fear of him.",
+                "I feel many moods and fluctuations at the same time, feeling tired and insomnia most of the time.",
+                "many changes in my daily routine to what suits the newborn, even in sleep, it changes to what suits him, so I do not sleep for long periods as usual, even Food changed to what benefits the child."
+            ],
+            "responses": [
+                "Well, now relax and let's discuss step by step how you feel and start with: \nWhat about anxiety and nervousness after childbirth?",
+                "Well, now relax and let's discuss step by step how you feel and start with: \nWhat does anxiety and nervousness represent to you after childbirth?",
+                "Well, now relax and let's discuss step by step how you feel and start with: \nDo you feel or suffer from anxiety and nervousness after childbirth?"
+            ]
+        },
+        {
+            "tag": "Postpartum1 Y",
+            "patterns": [
+                "Since birth, anxiety haunts me most of the time and makes me nervous.",
+                "Anxiety causes me psychological and nervous pressure since birth.",
+                "Yes, I suffer from anxiety and this makes me nervous most of the time since birth."
+            ],
+            "responses": [
+                "I understand, What about the prank situation?",
+                "I understand, Did childbirth affect your mood?",
+                "I understand, Do you feel a disturbance in the mood?"
+            ]
+        },
+        {
+            "tag": "Postpartum1 N",
+            "patterns": [
+                "Everything is fine and remains the same.",
+                "Anxiety and nervousness did not represent anything but a feeling, and I did not suffer from it.",
+                "No, I never feel anxious or nervous."
+            ],
+            "responses": [
+                "Good, What about the prank situation?",
+                "wonderful, Did childbirth affect your mood?",
+                "Greate, Do you feel a disturbance in the mood?"
+            ]
+        },
+        {
+            "tag": "Postpartum2 Y",
+            "patterns": [
+                "The mood is somewhat disturbed, because I feel happy at times, and suddenly I feel sad and nervous.",
+                "Yes, since birth my moods are unstable some times happy and some times sad.",
+                "Yes, I have been feeling a disturbance in the mood since birth, and this made me in an unstable mood."
+            ],
+            "responses": [
+                "Its okay, What does insomnia and focus mean to you since birth?",
+                "Its okay, Does insomnia affect focus since birth?",
+                "Its okay, Do you suffer from insomnia and difficulty concentrating since birth?"
+            ]
+        },
+        {
+            "tag": "Postpartum2 N",
+            "patterns": [
+                "No, childbirth never affected my mood.",
+                "No, I do not suffer from any mood disorders or fluctuations, my mood has not been affected and is as if nothing had happened."
+            ],
+            "responses": [
+                "Greate, What does insomnia and focus mean to you since birth?",
+                "Wonderful, Does insomnia affect focus since birth?",
+                "Good, Do you suffer from insomnia and difficulty concentrating since birth?"
+            ]
+        },
+        {
+            "tag": "Postpartum3 Y",
+            "patterns": [
+                "Insomnia and fatigue resulting from childbirth began to affect my concentration negatively, so it became very difficult to focus on things.",
+                "Yes, insomnia affected my focus negatively. I no longer focus on things as before.",
+                "Yes, I have difficulty concentrating because of the insomnia that I have suffered from since birth."
+            ],
+            "responses": [
+                "Do not worry, What about exhaustion and fatigue since birth?",
+                "Do not worry, Did childbirth make you exhausted and tired?",
+                "Do not worry, Do you feel tired and exhausted since birth?",
+                "Do not worry, Is exhaustion and fatigue after childbirth due to childbirth?"
+            ]
+        },
+        {
+            "tag": "Postpartum3 N",
+            "patterns": [
+                "Concentration and insomnia do not represent anything to me, since birth, everything is fine, as if nothing had happened",
+                "No, I do not feel anxious and therefore it does not affect my concentration.",
+                "No, I do not suffer from any difficulty in concentrating or insomnia, everything is fine."
+            ],
+            "responses": [
+                "Well, What about exhaustion and fatigue since birth?",
+                "Good, Did childbirth make you exhausted and tired?",
+                "Greate, Do you feel tired and exhausted since birth?",
+                "Nice, Is exhaustion and fatigue after childbirth due to childbirth?"
+            ]
+        },
+        {
+            "tag": "Postpartum4 Y",
+            "patterns": [
+                "Since birth, I have been in a state of exhaustion and abnormal fatigue, physical and mental exhaustion, and this affects my daily life.",
+                "Yes, childbirth made me in an unusual state of fatigue and exhaustion most of the time.",
+                "Yes, since birth I suffer from fatigue and exhaustion, and I feel mentally and physically exhausted most of the time.",
+                "Yes, because this condition I did not suffer from before birth, I became aware of it from birth."
+            ],
+            "responses": [
+                "Okay, Do you think of thoughts to harm yourself or your baby?",
+                "Okay, What thoughts are you thinking of?",
+                "Okay, Do you feel that you want to harm yourself or your baby?",
+                "Okay, What about your thoughts after giving birth?"
+            ]
+        },
+        {
+            "tag": "Postpartum4 N",
+            "patterns": [
+                "No, I haven't been tired or exhausted since giving birth and I am doing well now.",
+                "No, I do not feel tired or exhausted since birth, everything is as if nothing had happened."
+            ],
+            "responses": [
+                "Good, Do you think of thoughts to harm yourself or your baby?",
+                "Good, What thoughts are you thinking of?",
+                "Well, Do you feel that you want to harm yourself or your baby?",
+                "Well, What about your thoughts after giving birth?"
+            ]
+        },
+        {
+            "tag": "Postpartum5 Y",
+            "patterns": [
+                "Yes, I am tamed by many negative thoughts, such as self-harm or child abuse, and I am always in an irregular nervous state.",
+                "Thoughts of self-harm and child abuse are unusual, and this is the first time I think of this.",
+                "Yes, after giving birth, I always think negatively about myself and the child, and thoughts such as getting rid of the child for fear of him or committing suicide, and so on.",
+                "I always think of harming myself, either by death or suicide, and likewise with regard to the child, for fear of him."
+            ],
+            "responses": [
+                "Don't think like that, What does it represent in order to take care of a baby?",
+                "Don't think like that, What about the care of a baby?",
+                "Don't think like that, Are you having difficulty in caring for a baby?",
+                "Don't think like that, Do you feel difficult in the care of a baby?"
+            ]
+        },
+        {
+            "tag": "Postpartum5 N",
+            "patterns": [
+                "No, I don't think of harming myself or my child. I am happy with the new baby.",
+                "I don't think of anything but the child and I am happy with his presence.",
+                "No, I don't feel that way. On the contrary, I feel happy and joyful.",
+                "I always think about the future of the child and the correct way of raising him."
+            ],
+            "responses": [
+                "That is very good, What does it represent in order to take care of a baby?",
+                "That is very good, What about the care of a baby?",
+                "That is very good, Are you having difficulty in caring for a baby?",
+                "That is very good, Do you feel difficult in the care of a baby?"
+            ]
+        },
+        {
+            "tag": "Postpartum6 Y",
+            "patterns": [
+                "Taking care of a baby is a very difficult challenge for me because I don't go through such situations and I don't know what I should do.",
+                "Taking care of a baby is a very difficult thing, because I have not been exposed to this situation before, and I have to change my daily routine according to what suits him, and this is another very difficult thing.",
+                "Yes, I find it difficult to take care of a baby because he deals in a special way and needs full care all the time.",
+                "Yes, I feel difficult in caring for a baby because he needs experience in order to understand what he wants from some of his special movements, and this I have not been exposed to before and I did not have enough experience. "
+            ],
+            "responses": [
+                "Its okay, What about food and sleep after birth?",
+                "Its okay, Is there a change in food and sleep after birth?",
+                "Its okay, Do you suffer from lack of regular sleep and food well after giving birth?"
+            ]
+        },
+        {
+            "tag": "Postpartum6 N",
+            "patterns": [
+                "No, I don't face any difficulty in taking care of or raising a baby because I have enough ability to take care of him all the time without getting bored.",
+                "No, I do not feel difficult in taking care of the baby and everything is fine because I know the child what he wants from his own movements."
+            ],
+            "responses": [
+                "Its so good, What about food and sleep after birth?",
+                "Its so good, Is there a change in food and sleep after birth?",
+                "Its so good, Do you suffer from lack of regular sleep and food well after giving birth?"
+            ]
+        },
+        {
+            "tag": "Postpartum7 Y",
+            "patterns": [
+                "After birth, everything changed in terms of food, it became what suits the child in terms of vitamins and benefits for him, and in terms of sleep, sleep also became according to what suits the child's sleep.",
+                "Yes, eating and food has changed to what benefits the child, and sleep is no longer the same as before birth, so sleep has become during the period that the child sleeps only.",
+                "Yes, I suffer from lack of sleep and not eating normally, because eating is specific types that benefit the child, and sleep suffers from a lack of it, because it is according to the sleep of the child, and the child sleeps unstable and irregularly."
+            ],
+            "responses": [
+                "Don't worry, everything will be fine, and I will follow up with you to get through this stage"
+            ]
+        },
+        {
+            "tag": "Postpartum7 N",
+            "patterns": [
+                "No, there is no change in anything except a slight change that does not affect sleep, but with regard to food as it is.",
+                "No, I do not suffer from anything wrong with regard to sleep or food, everything is fine."
+            ],
+            "responses": [
+                "Don't worry, everything will be fine"
+            ]
+        },
+        {
+            "tag": "ADHD_key",
+            "patterns": [
+                "i am not okay, because everything is going unusual for me, I've become an impulsive person in all matters and decisions.",
+                "Haste in all decisions, even the decisive ones, regardless of bad results or dire consequences.",
+                "I interrupt others in speaking, and this makes me dislike communicating with them.",
+                "I am having difficulty forming social relationships.",
+                "I don't like help from others or support from them.",
+                "And I suffer from poor planning, because rushing makes me do all the things at the same time, I start one task, and I don't finish it until I start the other, and this is difficult."
+            ],
+            "responses": [
+                "Well, now relax and let's discuss step by step how you feel and start with: \nDo you suffer from distraction and inattention?",
+                "Well, now relax and let's discuss step by step how you feel and start with: \nDoes attention and attention affect your daily life?",
+                "Well, now relax and let's discuss step by step how you feel and start with: \nDo you have difficulty maintaining focus and attention?"
+            ]
+        },
+        {
+            "tag": "ADHD1 Y",
+            "patterns": [
+                "Distraction and attention make me not interested in details, and this leads me to make many mistakes due to negligence.",
+                "yes, it makes me love repetition and monotony, and avoid tasks that require mental effort and constant focus.",
+                "Yes, I suffer from distraction and lack of attention, and it is easy to be distracted by any external influences, and this causes me to lose my tools easily.and  forgetting daily activities and tasks.",
+                "Yes, distraction and lack of attention affect my daily tasks to the extent that I may forget my daily tasks and activities and move between activities and tasks to others without accomplishing any of them.",
+                "Yes, I have difficulty maintaining focus and attention, and also difficulty in following instructions, especially complex and sequential ones, and difficulty in arranging, organizing, and persevering in doing so."
+            ],
+            "responses": [
+                "Its okay, What about your movement, do you control it completely or properly or not?",
+                "Its okay, Is staying in a certain situation difficult for you as sitting quietly for a long time?",
+                "Its okay, Is movement on a regular basis for long periods difficult for you and incomplete control?"
+            ]
+        },
+        {
+            "tag": "ADHD1 N",
+            "patterns": [
+                "Distraction and inattention do not represent anything to me",
+                "I do any activity or any task, I must be at the top of my focus, and this attracts my attention well.",
+                "No, I do not suffer from distraction and inattention, on the contrary, everything is going in the right direction.",
+                "No, distraction and inattention do not affect any daily activity and I do my daily tasks as a challenge ",
+                "I perform my daily activities and tasks well.",
+                "No, I don't have any difficulties in maintaining my focus because when I do something, my focus is entirely on that thing."
+            ],
+            "responses": [
+                "Good, What about your movement, do you control it completely or properly or not?",
+                "Good, Is staying in a certain situation difficult for you as sitting quietly for a long time?",
+                "well, Is movement on a regular basis for long periods difficult for you and incomplete control?"
+            ]
+        },
+        {
+            "tag": "ADHD2 Y",
+            "patterns": [
+                "No and I have absolutely terrible hyperactivity, be it running or climbing or pouting with hands and feet, like swinging on a chair while sitting.",
+                "I can't fully control my movement",
+                "Yes, staying in one position like sitting for a long time makes me bored quickly and of course this makes it difficult for me to engage in daily activities calmly.",
+                "Yes, I am hypermobile, so I always don't sit normally, so I have to grieve with my hands or feet and rock or sway on the chair when I sit."
+            ],
+            "responses": [
+                "okay do not worry, What about impulsiveness? Do you see yourself as an impulsive and impulsive person?",
+                "okay do not worry, Do you suffer from haste or impulsiveness or something like that?",
+                "okay do not worry, What about talking to new people do you set limits to talk to them or not?"
+            ]
+        },
+        {
+            "tag": "ADHD2 N",
+            "patterns": [
+                "Yes, I completely control my movement",
+                "Sitting quietly is very good. It makes me fully focused and unoccupied when doing daily tasks, and this makes me do all daily tasks with ease.",
+                "No, staying seated for a long time does not affect anything and I feel alert while sitting and not swaying in the chair while sitting.",
+                "No, moving regularly for long periods of time is not difficult, and I can control it completely"
+            ],
+            "responses": [
+                "That is good, What about impulsiveness? Do you see yourself as an impulsive and impulsive person?",
+                "That is good, Do you suffer from haste or impulsiveness or something like that?",
+                "That is good, What about talking to new people do you set limits to talk to them or not?"
+            ]
+        },
+        {
+            "tag": "ADHD3 Y",
+            "patterns": [
+                "I am a very impulsive person",
+                "Yes, very impulsive and hasty, whether in answering questions, and this happens in exams",
+                "Yes, I usually interrupt the speech of others without them completing their speech because of my impulsiveness",
+                "Yes, I suffer from rushing to respond to others, whatever the consequences",
+                "I am impulsive and impulsive and do not like to wait and always make me reckless in my decisions or do not consider the consequences of participating in dangerous activities and interrupting others in speaking.",
+                "No, when talking to new people, I don't set boundaries, and I can't suppress what I want to say. I tell him everything about me"
+            ],
+            "responses": [
+                "Ok, How do you feel when you sit with other people?",
+                "Ok, Is it difficult for you to communicate with others or form social relationships?",
+                "Ok, Would you like help or support from others?"
+            ]
+        },
+        {
+            "tag": "ADHD3 N",
+            "patterns": [
+                "I am not impulsive or hasty or anything like that",
+                "I am a demure person who is not inclined to be impulsive or hasty or anything like that",
+                "I do not suffer from haste or impulsiveness, this trait I do not like",
+                "Yes, I set boundaries with new people, especially since I don't know them well"
+            ],
+            "responses": [
+                "That is grate, How do you feel when you sit with other people?",
+                "That is grate, Is it difficult for you to communicate with others or form social relationships?",
+                "That is grate, Would you like help or support from others?"
+            ]
+        },
+        {
+            "tag": "ADHD4 Y",
+            "patterns": [
+                "I feel fear, anxiety and stress when I sit with other people, and I prefer to leave the boards or meetings.",
+                "Communicating with others or forming social relationships is a huge difficulty for me, because when I sit with other people, I get scared and nervous.",
+                "I feel that everyone is against me and that I am threatened by others.",
+                "I don't want any help from others or any support. I know what I am doing and helping others is a threat to me that makes me uncontrollably nervous."
+            ],
+            "responses": [
+                "Well, What about planning in your opinion,how do you find it from a point of view?",
+                "Okay, Do you suffer from bad planning?",
+                "Well, Are you having difficulty planning?"
+            ]
+        },
+        {
+            "tag": "ADHD4 N",
+            "patterns": [
+                "I feel good about sitting with other people, I like to form new relationships with new people so that we don't get bored.",
+                "No, I don't have any difficulty communicating with others or doing charity. It's fun to have a lot of handouts all over the place.",
+                "Yes, helping some people do things is beautiful and makes life not boring, and support makes me do everything I can."
+            ],
+            "responses": [
+                "Greate, What about planning in your opinion,how do you find it from a point of view?",
+                "Good, Do you suffer from bad planning?",
+                "Wonderful, Are you having difficulty planning?"
+            ]
+        },
+        {
+            "tag": "ADHD5 Y",
+            "patterns": [
+                "I always feel bad about planning, because I want to do everything at one time, besides rushing into everything, and I am usually in a state of distraction and lack of focus, and this is enough to lead to poor planning in all your tasks.",
+                "Yes, yes, I suffer from bad planning because of my impulsiveness and lack of good focus in doing the task. I do not wait to finish the task except to do another at the same time.",
+                "Yes, yes, I have difficulty planning my tasks, whether daily or long-term, due to impulsiveness, distraction, and lack of focus."
+            ],
+            "responses": [
+                "its okay, What about you, do you feel self-confident, or is this feeling weak ?",
+                "its okay, Do you still feel confident in yourself or weakened this confidence ?",
+                "well, Do you have a sense of self-confidence, or is it no longer the case and is followed by a sense of inferiority ?"
+            ]
+        },
+        {
+            "tag": "ADHD5 N",
+            "patterns": [
+                "Planning for something is a must in our lives, whether daily or in the long term, because tasks are not accomplished without good planning.",
+                "No, I don't suffer from any bad planning, everything is going in the right direction.",
+                "No, I do not face any difficulty in planning. Good planning for tasks is a great thing that makes everything go well."
+            ],
+            "responses": [
+                "Greate, What about you, do you feel self-confident, or is this feeling weak ?",
+                "Greate, Do you still feel confident in yourself or weakened this confidence ?",
+                "Greate, Do you have a sense of self-confidence, or is it no longer the case and is followed by a sense of inferiority ?"
+            ]
+        },
+        {
+            "tag": "PTSD_key",
+            "patterns": [
+                "I feel intense tension and fear sometimes",
+                "I suffer from nightmares or difficulty sleeping",
+                "I am not okay at all. Most of the time I feel fear, stress and anxiety",
+                "I became afraid of everything, and even of my own memories that I loved to think about.",
+                "When I go to sleep, fear and stress increase because I have some nightmares in which the scene seems to be repeated."
+            ],
+            "responses": [
+                "Well, now relax and let's discuss step by step how you feel and start with: \nHave you been traumatized recently?",
+                "Well, now relax and let's discuss step by step how you feel and start with: \nHave you been exposed to a situation recently that caused you an abnormal condition?"
+            ]
+        },
+        {
+            "tag": "PTSD1 Y",
+            "patterns": [
+                "Yes, I came across a situation like this recently",
+                "Yes, I had a bad situation lately",
+                "Yes, I was traumatized not long ago",
+                "Yes, I became in an abnormal state as a result of a situation that happened recently"
+            ],
+            "responses": [
+                "Describe to me how you feel after this situation or trauma",
+                "What impact did this situation or trauma have on your life?"
+            ]
+        },
+        {
+            "tag": "PTSD1 N",
+            "patterns": [
+                "No, I haven't had any trauma recently",
+                "No, nothing bad has happened to me lately",
+                "No, I haven't had any bad trauma lately",
+                "No, I didn't have any trauma and all the later situations are fine.",
+                "No shock but I haven't been feeling well lately"
+            ],
+            "responses": [
+                "Are you normally an optimist or a pessimist?",
+                "Are you generally an optimist or pessimist?",
+                "Are you more upbeat or negative?"
+            ]
+        },
+        {
+            "tag": "PTSD2 Y",
+            "patterns": [
+                "I get very nervous thinking about what happened and sitting alone hurts me because my mind is thinking about what happened.",
+                "Everything has changed and is no longer the same as before",
+                "I always bring back bad memories",
+                "I often experience many mood swings at the same time"
+            ],
+            "responses": [
+                "Well, it's okay. Are you afraid of repeating this trauma again?",
+                "It's okay, what if this trauma or situation is repeated again, will you be able to deal with it or not?",
+                "Well, was the situation unexpected, and this is what shocked you"
+            ]
+        },
+        {
+            "tag": "PTSD3 Y",
+            "patterns": [
+                "Yes, I always feel afraid that the trauma will happen again at any time, and I don't feel safe at this time.",
+                "No, I will not be able to deal with her, because remembering her annoys me and causes me fear and tension",
+                "Yes, the situation was unexpected and shocked me, and I feel nervous and tense when the situation is mentioned",
+                "I don't know if I can handle it or not"
+            ],
+            "responses": [
+                "Okay, Are there good memories that you would like to remember or not?",
+                "Its okay, Do you feel happy when you retrieve your memories?",
+                "Okay, What does thinking about the past mean to you?",
+                "Okay, How do you feel about your memories before and after the accident?"
+            ]
+        },
+        {
+            "tag": "PTSD3 N",
+            "patterns": [
+                "No, I am not afraid of repeating the situation again, but it is still affecting my life",
+                "If it happens again, I will deal with it better than before"
+            ],
+            "responses": [
+                "Greate, Are there good memories that you would like to remember or not?",
+                "Greate okay, Do you feel happy when you retrieve your memories?",
+                "Greate, What does thinking about the past mean to you?",
+                "Greate, How do you feel about your memories before and after the accident?"
+            ]
+        },
+        {
+            "tag": "PTSD4 Y",
+            "patterns": [
+                "In the past, there were beautiful memories, but since this trauma, my memories have become a great burden for me, and I do not want to bring back the memories.",
+                "Before the trauma, I used to like thinking about my memories because they were the most beautiful part of my life, but after the trauma, I do not like thinking or talking about the trauma and what happened to it.",
+                "No, I don't like thinking about the past, especially when thinking about the trauma, because it makes me nervous.",
+                "Thinking about the past makes me nervous.",
+                "No, my mind no longer remembers the good memories, it only remembers this situation"
+            ],
+            "responses": [
+                "Do not worry, Do you experience some nightmares in a dream?",
+                "Do not worry, How do you feel when accepting to sleep?",
+                "Do not worry, Does sleep represent some concerns for you?"
+            ]
+        },
+        {
+            "tag": "PTSD4 N",
+            "patterns": [
+                "Yes, I feel happy when I remember my beautiful memories.",
+                "My memories represent the most beautiful part of my life, and reminiscing about the past makes me happy.",
+                "The accident or trauma does not change anything in my love of reliving my memories, as I always relive my memories.",
+                "The accident or trauma does not change anything in my love of reliving my memories, as I always relive my memories."
+            ],
+            "responses": [
+                "Not bad, Do you experience some nightmares in a dream?",
+                "Not bad, worry, How do you feel when accepting to sleep?",
+                "Not bad, worry, Does sleep represent some concerns for you?"
+            ]
+        },
+        {
+            "tag": "PTSD5 Y",
+            "patterns": [
+                "Yes, I feel the shock ,As if everything is happening again.",
+                "I feel the nervous pressure to feel the nightmares in the dream as if they were replaying the scene that happened in the trauma.",
+                "Sleep represents a great burden on me because I remember everything."
+            ],
+            "responses": [
+                "Do not worry, Is your daily routine still the same or has there been a change?",
+                "Do not worry, What about your daily routine?",
+                "Do not worry, Is your daily tasks affected by what happened?"
+            ]
+        },
+        {
+            "tag": "PTSD5 N",
+            "patterns": [
+                "No, I do not have any nightmares in a dream and sleep is very calm.",
+                "It does not represent anything new, as sleep for me is not affected as if it was before the accident."
+            ],
+            "responses": [
+                "That is good, Is your daily routine still the same or has there been a change?",
+                "That is good, What about your daily routine?",
+                "That is good, Is your daily tasks affected by what happened?"
+            ]
+        },
+        {
+            "tag": "PTSD6 Y",
+            "patterns": [
+                "Yes, my daily routine has become changeable and disorganized, because it is difficult to adapt to such events without change",
+                "Yes, my daily tasks have been affected somewhat because it is difficult to go through this situation and nothing has changed because something was not expected.",
+                "Before the trauma, my daily routine was going at a good pace, and I loved planning my daily routine well, but after this trauma, everything became untidy."
+            ],
+            "responses": [
+                "Well, What if you sit alone?",
+                "Well, Does sitting alone bother you?",
+                "Well, Do you sit most of the time alone?"
+            ]
+        },
+        {
+            "tag": "PTSD6 N",
+            "patterns": [
+                "No, my routine today is the same and does not change because I separate events and do my daily tasks to the fullest.",
+                "No, my daily tasks are going on normally and it has become easy to adapt to such situations."
+            ],
+            "responses": [
+                "Nice, What if you sit alone?",
+                "Wonderful, Does sitting alone bother you?",
+                "Wonderful, Do you sit most of the time alone?"
+            ]
+        },
+        {
+            "tag": "PTSD7 Y",
+            "patterns": [
+                "Sitting alone makes me remember the situation but it repeats itself in front of me and makes me feel anxious and tense most of the time.",
+                "Yes, it disturbs me because it makes us remember what happened and this makes me nervous most of the time.",
+                "No, I don't like sitting alone because sitting alone makes me think about what happened and this hurts me psychologically."
+            ],
+            "responses": [
+                "Don't worry, everything will be fine, and I will follow up with you to get through this stage"
+            ]
+        },
+        {
+            "tag": "PTSD7 N",
+            "patterns": [
+                "No, it does not bother me. Sitting alone is always pleasant for me because it makes me in a state of clarity of mind.",
+                "Yes, because sitting alone relaxes me and makes me happy"
+            ],
+            "responses": [
+                "That is very good do not worry, everything will be fine, and I will follow up with you to get through this stage"
+            ]
+        },
+        {
+            "tag": "education_key",
+            "patterns": [
+                "i am afraid from exams and continue education",
+                "i have some anixty from exams",
+                "i am nervous because of my exams will begin",
+                "i have exams and i do not have any plan to study"
+            ],
+            "responses": [
+                "are you suffer from this symptoms since 2 weeks or less ?",
+                "are you happens to you from this disorders since 2 weeks or less ?"
+            ]
+        },
+        {
+            "tag": "education1 Y",
+            "patterns": [
+                "yes, i suffer from education stress from about 2 weeks or less",
+                "yes, i have been suffering from education for a while recently. "
+            ],
+            "responses": [
+                "do not worry, it is normal to happened, are you losing concentration and distraction your attention ? ",
+                "do not worry, you will better , are you losing concentration and distraction your attention ? "
+            ]
+        },
+        {
+            "tag": "education1 N",
+            "patterns": [
+                "no, i am not suffer from education stress from about 2 weeks or less",
+                "no, i have not been suffering from education for a while recently. "
+            ],
+            "responses": [
+                "do not worry, it is normal to happened, are you losing concentration and distraction your attention ? ",
+                "do not worry, you will better , are you losing concentration and distraction your attention ? "
+            ]
+        },
+        {
+            "tag": "education2 Y",
+            "patterns": [
+                "yes, i losing concentration and not control in my attention ",
+                "yes, i losing concentration"
+            ],
+            "responses": [
+                "ok, another question. are you losing of ability to fall asleep or sleeping very oversleep ?",
+                "ok, another question. are you not able to fall asleep or sleeping much  ?"
+            ]
+        },
+        {
+            "tag": "education2 N",
+            "patterns": [
+                "no, i have high concentration and control in my attention ",
+                "no, i have high concentration"
+            ],
+            "responses": [
+                "ok, another question are you losing of ability to fall asleep or sleeping very oversleep ?",
+                "ok, another question. are you not able to fall asleep or sleeping much  ?"
+            ]
+        },
+        {
+            "tag": "education3 Y",
+            "patterns": [
+                "yes, i sleep a lot ",
+                "yes, i loss ability to sleep regularly ",
+                "yes, i not sleep and thinking ",
+                "yes i sleep much to escape from study"
+            ],
+            "responses": [
+                "Do you have annoying nightmares like failing the exam or being late for it ?",
+                "Do you feel that you will miss the exam ?"
+            ]
+        },
+        {
+            "tag": "education3 N",
+            "patterns": [
+                "no, i sleep good and regularly ",
+                "no, i have ability to sleep regularly "
+            ],
+            "responses": [
+                "Do you have annoying nightmares like failing the exam or being late for it ?",
+                "Do you feel that you will miss the exam ?"
+            ]
+        },
+        {
+            "tag": "education4 Y",
+            "patterns": [
+                "yes, I always feel that I will miss the exam. ",
+                "I always have nightmares that I failed the exam and that I will miss the exam. "
+            ],
+            "responses": [
+                "Do you have an exaggerated food appetite or a complete loss of appetite of food ? ",
+                "Do you have an much food appetite or less of appetite of food ? "
+            ]
+        },
+        {
+            "tag": "education4 N",
+            "patterns": [
+                "no, I have not nightmares associated with i failed the exam  ",
+                "no, i live a good life and good sleep"
+            ],
+            "responses": [
+                "Do you have an exaggerated food appetite or a complete loss of appetite of food ? ",
+                "Do you have an much food appetite or less of appetite of food ? "
+            ]
+        },
+        {
+            "tag": "education5 Y",
+            "patterns": [
+                "yes, i have exaggerated food appetite.",
+                "yes, i am eating all time in day",
+                "yes, i eating much",
+                "yes, i not eating while exams. ",
+                "yes, i do not eating well since i started exams"
+            ],
+            "responses": [
+                "ok, are you losing confidence in closest friends, feeling sad, feeling overwhelmed or unable to make decisions or physical signs like stomach aches, nail-biting or fidgeting. ",
+                "ok, are you stopped trusting your closest friends, feeling sad, feeling disapointed or unable to make decisions or physical signs like stomach aches, nail-biting or fidgeting. "
+            ]
+        },
+        {
+            "tag": "education5 N",
+            "patterns": [
+                "i eating good and regularly",
+                "i have not exaggerated food appetite or loss it ",
+                "i eating well since i started exams"
+            ],
+            "responses": [
+                "ok, are you losing confidence in closest friends, feeling sad, feeling overwhelmed or unable to make decisions or physical signs like stomach aches, nail-biting or fidgeting. ",
+                "ok, are you stopped trusting your closest friends, feeling sad, feeling disapointed or unable to make decisions or physical signs like stomach aches, nail-biting or fidgeting. "
+            ]
+        },
+        {
+            "tag": "education6 Y",
+            "patterns": [
+                "yes, i do not have confidence in my closest friends and feeling sad",
+                "yes, i unable to make decisions. ",
+                "yes, i have stomach aches and nail biting"
+            ],
+            "responses": [
+                "ok, do not worry that is normal to happened , because of the exam period and i will help you to overcome that state.",
+                "Do not worry , every thing get well soon and i will help you to overcome that state. "
+            ]
+        },
+        {
+            "tag": "education6 N",
+            "patterns": [
+                "i have all confidence in my closest friends and not feeling sad",
+                "i able to make decisions well. ",
+                "i have not stomach aches and nail biting"
+            ],
+            "responses": [
+                "ok, that is great to hear it and you are healthy enough",
+                "ok, happy for you , because of you do not suffer from any education disorder"
+            ]
+        },
+        {
+            "tag": "short answer",
+            "patterns": [
+                "Yes",
+                "No",
+                "Yes, i do",
+                "Yes, i feel",
+                "No , i did not",
+                "No , i do not feel",
+                "Yep",
+                "Nope",
+                "Yup",
+                "Nuh",
+                "sure"
+            ],
+            "responses": [
+                "Sorry, but please reply with a detailed answer so that I can help you. Try not to use short answers"
+            ]
+        },
+        {
+            "tag": "good bye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye"
+            ],
+            "responses": [
+                "See you later",
+                "Have a nice day",
+                "Bye! Come back again soon."
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Thank's a lot!"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure"
+            ]
+        }
+    ]
+}
