@@ -23,8 +23,8 @@ from . import train
 from .train import all_word,tags,xy,set_state
 from . import model
 
-model = load_model("ChatbotAPI/model.h5")
-intents = json.loads(open("ChatbotAPI/dataset.json").read())
+model = load_model("model.h5")
+intents = json.loads(open("dataset.json").read())
 
 app = Flask(__name__)
 
