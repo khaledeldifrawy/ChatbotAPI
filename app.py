@@ -101,3 +101,6 @@ def chatbot_response():
     dict1["cnt"] = res
 
     return dict1
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=50000)
