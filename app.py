@@ -21,7 +21,7 @@ from nltk_utils import tokenize, stem, bag_of_ward
 from train import all_word,tags,xy,set_state
 
 model = load_model("model.h5")
-intents = json.loads(open("dataset.json").read())
+intents = json.loads(open("new-dataset.json").read())
 
 app = Flask(__name__)
 
