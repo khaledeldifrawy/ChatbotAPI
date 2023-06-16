@@ -13,7 +13,7 @@ from nltk_utils import tokenize, stem, bag_of_ward
 from tensorflow.keras.preprocessing.text import Tokenizer
 
 ###################################################################################
-with open('dataset.json') as f:
+with open('new-dataset.json') as f:
     intents = json.load(f)
 ###################################################################################
 all_word = []
