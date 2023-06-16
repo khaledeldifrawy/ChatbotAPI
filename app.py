@@ -22,12 +22,8 @@ from train import all_word,tags,xy,set_state
 
 model = load_model("final.h5")
 intents = json.loads(open("new-dataset.json").read())
-steps = 0
-depreesion = ["1. Practice Self-Care: Taking care of your physical and emotional needs is important for managing depression. This can include getting enough sleep, eating a balanced diet, exercising regularly, and engaging in activities that bring you joy.","2. Seek professional help: Depression is a serious condition that may require medical attention. It is important to speak with a mental health professional who can provide guidance and support in managing your symptoms.","3. Follow your treatment plan: If you are prescribed a medication, be sure to take it as directed by your doctor. Attend all therapy sessions and actively participate in your treatment plan.","4. Challenging negative thoughts: Depression can often involve negative thoughts and self-criticism. Practice challenging these thoughts by looking for evidence that supports or contradicts them, and rephrasing them in a more positive and realistic light.","5. Stay connected: Social support is important for managing depression. Make an effort to stay in touch with friends and loved ones, even if it feels challenging.","6. Practice relaxation techniques: Relaxation techniques such as deep breathing, meditation or yoga can help manage stress and reduce symptoms of depression.","7. Remember that recovery from depression is a process and may take time. Be patient with yourself and don't hesitate to ask for help when you need it."]
-def steps_print (Diagnosy):
-    if Diagnosy == 'depreesion':
-        for i in depreesion :
-            print(i)
+
+
 app = Flask(__name__)
 
 
@@ -38,6 +34,12 @@ def hello():
 
 @app.route("/chat", methods=["GET", "POST"])          
 def chatbot_response():
+    steps = 0
+    depreesion = ["1. Practice Self-Care: Taking care of your physical and emotional needs is important for managing depression. This can include getting enough sleep, eating a balanced diet, exercising regularly, and engaging in activities that bring you joy.","2. Seek professional help: Depression is a serious condition that may require medical attention. It is important to speak with a mental health professional who can provide guidance and support in managing your symptoms.","3. Follow your treatment plan: If you are prescribed a medication, be sure to take it as directed by your doctor. Attend all therapy sessions and actively participate in your treatment plan.","4. Challenging negative thoughts: Depression can often involve negative thoughts and self-criticism. Practice challenging these thoughts by looking for evidence that supports or contradicts them, and rephrasing them in a more positive and realistic light.","5. Stay connected: Social support is important for managing depression. Make an effort to stay in touch with friends and loved ones, even if it feels challenging.","6. Practice relaxation techniques: Relaxation techniques such as deep breathing, meditation or yoga can help manage stress and reduce symptoms of depression.","7. Remember that recovery from depression is a process and may take time. Be patient with yourself and don't hesitate to ask for help when you need it."]
+    def steps_print (Diagnosy):
+        if Diagnosy == 'depreesion':
+            for i in depreesion :
+                print(i)
     msg = str(request.args['msg'])
     flag = 0
     Diagnosis1 = {
