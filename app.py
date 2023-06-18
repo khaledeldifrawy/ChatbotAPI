@@ -31,7 +31,7 @@ load_transformer.load_weights('weights.data-00000-of-00001')
 model = load_model("model.h5")
 intents = json.loads(open("new-dataset.json").read())
  
- MAX_LENGTH = 70
+MAX_LENGTH = 70
 
 def evaluate(inp_sentence, model,  tokenizer_q, tokenizer_a):
     start_token = [tokenizer_q.vocab_size]
