@@ -1,6 +1,7 @@
 from flask import Flask, request
 import numpy as np
 import pickle
+import tensorflow as tf
 import json
 import joblib
 from keras.models import load_model
@@ -10,8 +11,8 @@ from train import all_word,tags,xy,set_state
 app = Flask(__name__)
 
 
-tokenizer_q1 = joblib.load("tokenizer_q")
-tokenizer_a1 = joblib.load("tokenizer_a")
+tokenizer_q = joblib.load("tokenizer_q")
+tokenizer_a = joblib.load("tokenizer_a")
 
 num_layers = 4
 d_model = 1024
