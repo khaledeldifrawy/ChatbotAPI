@@ -4,7 +4,6 @@ import pickle
 import tensorflow as tf
 import json
 import joblib
-import tensorflow_datasets
 from keras.models import load_model
 from nltk_utils import tokenize, stem, bag_of_ward
 from train import all_word,tags,xy,set_state
