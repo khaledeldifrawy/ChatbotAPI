@@ -72,7 +72,7 @@ def evaluate(inp_sentence, model,  tokenizer_q, tokenizer_a):
 
     return tf.squeeze(decoder_input, axis=0), attention_weights
  
- def reply(sentence, transformer,  tokenizer_q, tokenizer_a, plot=''):
+def reply(sentence, transformer,  tokenizer_q, tokenizer_a, plot=''):
     result, attention_weights = evaluate(sentence, transformer,  tokenizer_q, tokenizer_a)
 #     print("Attention_Blocks:", list(attention_weights.keys()))
     predicted_sentence = tokenizer_a.decode([i for i in result 
