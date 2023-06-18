@@ -8,6 +8,9 @@ from keras.models import load_model
 from nltk_utils import tokenize, stem, bag_of_ward
 from train import all_word,tags,xy,set_state
 
+!pip install tensorflow_datasets
+
+
 app = Flask(__name__)
 
 
