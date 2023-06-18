@@ -131,10 +131,10 @@ def chatbot_response():
 
 
         else:
-            _,respon=reply(real_sentence, transformer,  tokenizer_q, tokenizer_a, "decoder_layer2_block2")
+            _,respon=reply(msg, load_transformer,  tokenizer_q, tokenizer_a, "decoder_layer2_block2")
             res = respon
     else:
-        _,respon=reply(real_sentence, transformer,  tokenizer_q, tokenizer_a, "decoder_layer2_block2")
+        _,respon=reply(msg, load_transformer,  tokenizer_q, tokenizer_a, "decoder_layer2_block2")
         res = respon
 
     dict1 = {"cnt": res}
