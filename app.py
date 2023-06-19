@@ -7,14 +7,18 @@ import joblib
 from keras.models import load_model
 from nltk_utils import tokenize, stem, bag_of_ward
 from train import all_word,tags,xy,set_state
+import pickle
 
+# Load the object from the pickle file
 
 
 app = Flask(__name__)
 
+with open("tokenizer_q.pkl", "rb") as file:
+    tokenizer_q = pickle.load(file)
+with open("tokenizer_a.pkl", "rb") as file:
+    tokenizer_a = pickle.load(file)
 
-tokenizer_q1 = joblib.load("tokenizer_q.pkl")
-tokenizer_a1 = joblib.load("tokenizer_a.pkl")
 
 num_layers = 4
 d_model = 1024
