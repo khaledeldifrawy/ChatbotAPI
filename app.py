@@ -13,8 +13,8 @@ from train import all_word,tags,xy,set_state
 app = Flask(__name__)
 
 
-tokenizer_q = joblib.load("tokenizer_q.pkl")
-tokenizer_a = joblib.load("tokenizer_a.pkl")
+tokenizer_q1 = joblib.load("tokenizer_q.pkl")
+tokenizer_a1 = joblib.load("tokenizer_a.pkl")
 
 num_layers = 4
 d_model = 1024
