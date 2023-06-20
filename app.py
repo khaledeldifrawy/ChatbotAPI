@@ -17,7 +17,7 @@ tokenizer_q1 = joblib.load("tokenizer_q")
 # tokenizer_a
 tokenizer_a1 = joblib.load("tokenizer_a")
 
-model = load_model("grad.h5")
+model = load_model("model.h5")
 intents = json.loads(open("new-dataset.json").read())
 
 
