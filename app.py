@@ -13,9 +13,24 @@ app = Flask(__name__)
 
 
 # tokenizer_q
-tokenizer_q1 = joblib.load("tokenizer_q")
+tokenizer_q = joblib.load("tokenizer_q")
 # tokenizer_a
-tokenizer_a1 = joblib.load("tokenizer_a")
+tokenizer_a = joblib.load("tokenizer_a")
+
+num_layers = 4
+d_model = 1024
+dff = 512
+num_heads = 8
+input_vocab_size = tokenizer_q.vocab_size + 2
+target_vocab_size = tokenizer_a.vocab_size + 2
+dropout_rate = 0.1
+transformer = Transformer(num_layers, d_model, num_heads, dff,
+                          input_vocab_size, target_vocab_size, 
+                          pe_input=input_vocab_size, 
+                          pe_target=target_vocab_size,
+                          rate=dropout_rate)
+transformer.load_weights('weights.data-00000-of-00001')
+
 
 model = load_model("model.h5")
 intents = json.loads(open("new-dataset.json").read())
@@ -34,76 +49,194 @@ def steps_print (Diagnosy,res):
         temp = res+depreesion
         return temp
     elif Diagnosy == 'anxiety disorder':
-        for i in Anxiety :
-            print(i)
+        temp = res+Anxiety
+        return temp
     elif Diagnosy == 'addictive':
-        for i in Addictive :
-            print(i)
+        temp = res+Addictive
+        return temp
     elif Diagnosy == 'Schizophrenia':
-        for i in depreesion :
-            print(i)
+        temp = res+schizophrenic
+        return temp
     elif Diagnosy == 'Postpartum':
-        for i in Postpartum :
-            print(i)
+        temp = res+Postpartum
+        return temp
     elif Diagnosy == 'ADHD':
-        for i in ADHD :
-            print(i)       
+        temp = res+ADHD
+        return temp       
     elif Diagnosy == 'PTSD':
-        for i in PTSD :
-            print(i)  
+        temp = res+PTSD
+        return temp  
     elif Diagnosy == 'education':
-        for i in education_Disorder :
-            print(i)
+        temp = res+education_Disorder
+        return temp
+
+def evaluate(inp_sentence, model,  tokenizer_q, tokenizer_a):
+    start_token = [tokenizer_q.vocab_size]
+    end_token = [tokenizer_q.vocab_size + 1]
+
+    # All questions has the start and end token
+    inp_sentence = start_token + tokenizer_q.encode(inp_sentence) + end_token
+    encoder_input = tf.expand_dims(inp_sentence, 0)
+
+    # 'answers' start token : 27358
+    decoder_input = [tokenizer_a.vocab_size]
+    decoder_input = tf.expand_dims(decoder_input, 0)
+
+    for i in range(MAX_LENGTH):
+        enc_padding_mask, combined_mask, dec_padding_mask = create_masks(encoder_input, decoder_input)
+
+        # predictions.shape == (batch_size, seq_len, vocab_size)
+        predictions, attention_weights = model(encoder_input, 
+                                                     decoder_input,
+                                                     False,
+                                                     enc_padding_mask,
+                                                     combined_mask,
+                                                     dec_padding_mask)
+
+        # select the last word from the seq_len dimension
+        predictions = predictions[: ,-1:, :]  # (batch_size, 1, vocab_size)
+
+        predicted_id = tf.cast(tf.argmax(predictions, axis=-1), tf.int32)
+
+        # return the result if the predicted_id is equal to the end token
+        if predicted_id == tokenizer_a.vocab_size+1:
+#             print(f"=============\nGot end token\n=============")
+            return tf.squeeze(decoder_input, axis=0), attention_weights
+
+        # concatentate the predicted_id to the output which is given to the decoder
+        # as its input.
+        decoder_input = tf.concat([decoder_input, predicted_id], axis=-1)
+
+    return tf.squeeze(decoder_input, axis=0), attention_weights
+    
+def reply(sentence, transformer,  tokenizer_q, tokenizer_a, plot=''):
+    result, attention_weights = evaluate(sentence, transformer,  tokenizer_q, tokenizer_a)
+#     print("Attention_Blocks:", list(attention_weights.keys()))
+    predicted_sentence = tokenizer_a.decode([i for i in result 
+                                            if i < tokenizer_a.vocab_size])  
+#     print('Input: {}'.format(sentence))
+#     print('Predicted translation: {}'.format(predicted_sentence))
+    if plot:
+        plot_attention_weights(attention_weights,tokenizer_q, tokenizer_a, sentence, result, plot)
+    return sentence, predicted_sentence
 
 
+visited = []
+def set_state (tag_init):
+    tag = tag_init[:len(tag_init)-3]
+    signal = tag_init[-1]
+
+    if tag_init in visited :
+        return
+    else:
+        visited.append(tag_init)
+        
+        if Diagnosis.get(tag,-1)+1 and signal == 'Y':
+            Diagnosis[tag]=Diagnosis.get(tag,0)+1
+
+state = [] 
+def calc_state():
+    Diagnosis_copy = Diagnosis
+    Diagnosis1_copy = Diagnosis1
+    keys=list(Diagnosis_copy.keys())
+    #print(keys)
+    total= sum(Diagnosis_copy.values())
+    #print(total)
+
+    for i in keys:
+        state.append([i,round(100*Diagnosis_copy[i]/Diagnosis1_copy[i])])
+    state.sort(key = lambda i: i[1],reverse = True)
+    visited = []
+    Diagnosis_copy = Diagnosis_copy.fromkeys(Diagnosis_copy, 0)
+    
+    
+def show_state():
+    res = ''
+    count =  0
+    for i in state:
+        if i[1]:
+            if count == 0:
+                res = res + str(i[0]) + ' related symptoms ' + str(i[1]) +'%'
+            else:
+                res = res + '\n' +str(i[0]) + ' related symptoms ' + str(i[1]) +'%'
+            
+    return res
 @app.route("/chat", methods=["GET", "POST"])
 def chatbot_response():
+    
     flag = 0
-    steps=1
-    diagnosis = {
-        "depression": 0,
-        "anxiety disorder": 0,
-        "addictive": 0,
-        "Schizophrenia": 0,
-        "Postpartum": 0,
-        "ADHD": 0,
-        "PTSD": 0,
-        "education": 0,
+    generative = 0
+    steps = 0
+    Diagnosis1={
+        "depreesion":9,
+        "anxiety disorder":7,
+        "addictive":5,
+        "Schizophrenia":8,
+        "Postpartum":7,
+        "ADHD":5,
+        "PTSD":7,
+        "education":6,
     }
-
+    Diagnosis={
+        "depreesion":0,
+        "anxiety disorder":0,
+        "addictive":0,
+        "Schizophrenia":0,
+        "Postpartum":0,
+        "ADHD":0,
+        "PTSD":0,
+        "education":0,
+    }
+    
     msg = str(request.args.get('msg', ''))
-    tokens = tokenize(msg)
-    X = bag_of_ward(tokens, all_word)
-    X = np.array(X)
+    
+    if sentence == '!My_state':
+        res = show_state()
+        dict1 = {"cnt": res}
+        return dict1
+    
+    if generative ==0 :
+        tokens = tokenize(msg)
+        X = bag_of_ward(tokens, all_word)
+        X = np.array(X)
 
-    output = model.predict(np.array([X]))[0]
-    predicted = np.argmax(output)
-    tag = tags[predicted]
+        output = model.predict(np.array([X]))[0]
+        predicted = np.argmax(output)
+        tag = tags[predicted]
 
-    if tag[-4:] == '_key':
-        diagnosis[tag[:-4]] = 1
+        if tag[-4:] == '_key':
+            diagnosis[tag[:-4]] = 1
 
-    prob = output[predicted]
-    if prob > 0:
-        if diagnosis.get(tag[:-3], -1) + 1 and diagnosis[tag[:-3]] == 0:
-            diagnosis[tag[:-3]] = 1
-            if tag[:-3] == 'addictive' and diagnosis['depression'] != 0:
-                tag = tag
-            else:
-                tag = tag[:-3] + '_key'
+        prob = output[predicted]
+        if prob > 0:
+            if diagnosis.get(tag[:-3], -1) + 1 and diagnosis[tag[:-3]] == 0:
+                diagnosis[tag[:-3]] = 1
+                if tag[:-3] == 'addictive' and diagnosis['depression'] != 0:
+                    tag = tag
+                else:
+                    tag = tag[:-3] + '_key'
 
-        if diagnosis.get(tag[:-3], -1) + 1 and tag[-2] == 'E':
-            flag = 1
-            steps=1
+            if diagnosis.get(tag[:-3], -1) + 1 and tag[-2] == 'E':
+                flag = 1
+                generative = 1
+                steps = 1
 
-        for intent in intents["intents"]:
-            if tag == intent["tag"]:
-                res =  np.random.choice(intent['responses'])
-                if steps == 1 :
-                        res= steps_print(tag[:len(tag)-3],res)
-             
-        
-    else:
+            for intent in intents["intents"]:
+                if tag == intent["tag"]:
+                    res =  np.random.choice(intent['responses'])
+                    if steps == 1 :
+                            res= steps_print(tag[:len(tag)-3],res)
+                            steps = 0
+
+                    prev_tag = tag
+                    if flag == 1 :
+                        calc_state()
+                        flag = 0
+
+        else:
+            _,respon=reply(real_sentence, transformer,  tokenizer_q, tokenizer_a, "decoder_layer2_block2")
+            res = respon
+    else :
         _,respon=reply(real_sentence, transformer,  tokenizer_q, tokenizer_a, "decoder_layer2_block2")
         res = respon
 
