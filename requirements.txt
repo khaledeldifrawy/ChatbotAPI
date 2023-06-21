@@ -10,4 +10,4 @@ joblib
 tensorflow_datasets
 transformers
 tensorrt
-tensorflow-gpu
+
