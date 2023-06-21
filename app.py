@@ -91,7 +91,8 @@ def chatbot_response():
             if tag == intent["tag"]:
                 res = np.random.choice(intent['responses'])
                 if steps == 1 :
-                        res= steps_print(tag[:len(tag)-3],res)
+                    res= steps_print(tag[:len(tag)-3],res)
+                    steps = 0
              
         
     else:
